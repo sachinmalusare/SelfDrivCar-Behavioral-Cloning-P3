@@ -45,7 +45,7 @@ the model, it generates model.h5 and model.json files. Then saved
 weights can be used for the autonomous driving using the driver,py.
 Dues to some local system issue , I could not run model.h5 file.
 Instead it worked with the model.json file.
---
+
 ###Training Data Generation: Udacity's Car-Driving Simulator
 
 The model was trained by driving a car in the Udacity's car-driving
@@ -88,9 +88,10 @@ data for steering, throttle, brake and speed is also contained in the
 log. Only steering was used as label in this project. Below are the
 example image at center and at the left.
 
-![image-output1](./output_images/UndistortedImage.jpg)
+![image-output1](./images/steer_straight.png)
 
-![image-output2](./output_images/UndistortedImage.jpg)
+![image-output2](./images/steer_left.png)
+
 
 The image output from the simulator is of size 160*620 with three
 color channels.
@@ -110,9 +111,9 @@ car out of the track. I have created extra images by moving the car
 on little right side and taking the left turn. But it helped to get good
 results.
 
-![image-output3](./output_images/UndistortedImage.jpg)
+![image-output3](./images/Training-data.png)
 
-![image-output4](./output_images/UndistortedImage.jpg)
+![image-output4](./images/validation-data.png)
 
 ###Model Architecture and Training Strategy
 I have used a python generator to feed training and validation data
@@ -160,7 +161,7 @@ from 0.0005 to 0.0001. So I adhered to it till last.
 
 ##Final Model architecture:
 
-![image-output4](./output_images/UndistortedImage.jpg)
+![image-output5](./images/model.png)
 
 The model was compiled with an adam optimizer (learning rate =0 .
 0001), Mean Squared Error (mse) as a loss metric, and was set to
