@@ -2,7 +2,7 @@
 
 This repository contains  files for the Behavioral Cloning Project.
 
-In this project, applied what so ever learned about deep neural networks and convolutional neural networks to clone driving behavior. I have  traines, validated and tested a model using Keras. The model output a steering angle to an autonomous vehicle.
+In this project, applied learnings about deep neural networks and convolutional neural networks to clone driving behavior. I have  trained, validated and tested a model using Keras. The model output a steering angle to an autonomous vehicle.
 
 Simulator is used to steer a car around a track for data collection. Image data and steering angles are used to train a neural network and then used this model to drive the car autonomously around the track.
 
@@ -68,8 +68,7 @@ When I have not got the required results, I have generated more
 data with additional laps. Later I used some additional data by
 flipping the images.
 
-####I recorded myself driving around Track 1 first using the
-using the mouse.
+####I recorded myself driving around Track 1 first using the mouse.
 
 - Recovery: I then recorded driving the car only from the side
 of the road to the center, both along straight roads and along
@@ -161,7 +160,7 @@ from 0.0005 to 0.0001. So I adhered to it till last.
 
 ##Final Model architecture:
 
-![image-output5](./images/model.png)
+![image-output5](./images/model.PNG)
 
 The model was compiled with an adam optimizer (learning rate =0 .
 0001), Mean Squared Error (mse) as a loss metric, and was set to
@@ -194,6 +193,7 @@ images only. Once I understood the step by step process I started
 working on the preprocessing of the images. Images were croped to
 xxxxxx and normalised within the Keras code. Initial result was so
 poor that I could drive only around 5-10 seconds.
+
 Then I had started with the incremental approach to train the car. I
 have used recovery images so that car can center itself whenever
 goes off track, which certainly helped to go little further, but not
@@ -202,18 +202,22 @@ could not understand, how to fo flip images within the generator.
 So generated flipped images seperately and appended to the
 data.So after so much of data I can see my car showing little
 results.
+
 Simultaneously I worked on the model , experimented with relu
 activation and dropouts to get the optimum results.
 Though results was not good , at least I could tried to get it moving
 for around a mute . I have not tried at all on the second track as I
 could not get over the first.
-Second Submission:
+
+###Second Submission:
 Due to poor performance in autonomous driving, reviwer suggested
 me few changes like changing the throttle calculation as below:
+
 throttle = max(0.1, -0.15/0.05 * abs(steering_angle) + 0.38)
 And surprisingly I can see car moving perfecly on the track. Thanks
 to the specific insight into the code. This proves that my training
 data and the modeling strategy was right.
+
 Now I can see the car moving steadily most of the time through
 the center of the track. Whenever it tries to move away it align
 itself to the center position by calculating appropriate steering angle.
